@@ -575,6 +575,86 @@
 #define LCD_SWAP_XY false
 #endif // ESP_USB_OTG
 
+#ifdef CYD_2432S028R
+#include <esp_lcd_panel_ili9341.h>
+#define LCD_BCKL_ON_LEVEL 1
+#define LCD_BCKL_OFF_LEVEL !LCD_BCKL_ON_LEVEL
+#define LCD_SPI_HOST    SPI2_HOST
+#define LCD_DMA
+#define LCD_PIN_NUM_MISO 12
+#define LCD_PIN_NUM_MOSI 13
+#define LCD_PIN_NUM_CLK  14
+#define LCD_PIN_NUM_CS   15
+#define LCD_PIN_NUM_DC   2
+#define LCD_PIN_NUM_RST  -1
+#define LCD_PIN_NUM_BCKL 21
+#define LCD_PANEL esp_lcd_new_panel_ili9341
+#define LCD_HRES 240
+#define LCD_VRES 320
+#define LCD_COLOR_SPACE ESP_LCD_COLOR_SPACE_BGR
+#define LCD_PIXEL_CLOCK_HZ (40 * 1000 * 1000)
+#define LCD_GAP_X 0
+#define LCD_GAP_Y 0
+#define LCD_MIRROR_X false
+#define LCD_MIRROR_Y false
+#define LCD_INVERT_COLOR false
+#define LCD_SWAP_XY true
+#define LCD_SWAP_COLOR_BYTES true
+#endif // CYD_2432S028
+
+#ifdef CYD_2432S028RV2
+#include <esp_lcd_panel_ili9341.h>
+#define LCD_BCKL_ON_LEVEL 1
+#define LCD_BCKL_OFF_LEVEL !LCD_BCKL_ON_LEVEL
+#define LCD_SPI_HOST    SPI2_HOST
+#define LCD_DMA
+#define LCD_PIN_NUM_MISO 12
+#define LCD_PIN_NUM_MOSI 13
+#define LCD_PIN_NUM_CLK  14
+#define LCD_PIN_NUM_CS   15
+#define LCD_PIN_NUM_DC   2
+#define LCD_PIN_NUM_RST  -1
+#define LCD_PIN_NUM_BCKL 21
+#define LCD_PANEL esp_lcd_new_panel_ili9341
+#define LCD_HRES 240
+#define LCD_VRES 320
+#define LCD_COLOR_SPACE ESP_LCD_COLOR_SPACE_BGR
+#define LCD_PIXEL_CLOCK_HZ (40 * 1000 * 1000)
+#define LCD_GAP_X 0
+#define LCD_GAP_Y 0
+#define LCD_MIRROR_X false
+#define LCD_MIRROR_Y false
+#define LCD_INVERT_COLOR false
+#define LCD_SWAP_XY true
+#define LCD_SWAP_COLOR_BYTES true
+#endif // CYD_2432S028V2
+
+#ifdef CYD_2432S028RV3
+#define LCD_BCKL_ON_LEVEL 1
+#define LCD_BCKL_OFF_LEVEL !LCD_BCKL_ON_LEVEL
+#define LCD_SPI_HOST    SPI2_HOST
+#define LCD_DMA
+#define LCD_PIN_NUM_MISO -1
+#define LCD_PIN_NUM_MOSI 13
+#define LCD_PIN_NUM_CLK  14
+#define LCD_PIN_NUM_CS   15
+#define LCD_PIN_NUM_DC   2
+#define LCD_PIN_NUM_RST  -1
+#define LCD_PIN_NUM_BCKL 21
+#define LCD_PANEL esp_lcd_new_panel_st7789
+#define LCD_HRES 240
+#define LCD_VRES 320
+#define LCD_COLOR_SPACE ESP_LCD_COLOR_SPACE_BGR
+#define LCD_PIXEL_CLOCK_HZ (40 * 1000 * 1000)
+#define LCD_GAP_X 0
+#define LCD_GAP_Y 0
+#define LCD_MIRROR_X false
+#define LCD_MIRROR_Y false
+#define LCD_INVERT_COLOR false
+#define LCD_SWAP_XY true
+#define LCD_SWAP_COLOR_BYTES true
+#endif // CYD_2432S028V2
+
 #ifndef LCD_WIDTH
 #ifdef LCD_SWAP_XY
 #if LCD_SWAP_XY
