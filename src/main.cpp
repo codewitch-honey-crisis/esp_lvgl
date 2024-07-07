@@ -65,7 +65,7 @@ void loop() {
 void loop_task(void* state) {
     while(true) {
         update_all();
-        vTaskDelay(5);
+        vTaskDelay(1);
     }
 }
 void app_main() {
